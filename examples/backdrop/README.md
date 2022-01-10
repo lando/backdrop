@@ -20,6 +20,7 @@ lando init --source remote --remote-url https://github.com/backdrop/backdrop/rel
 
 # Should start up successfully
 cd backdrop
+echo -e "\nplugins:\n  \"@lando/backdrop/\": ./../../" >> .lando.yml
 lando start
 ```
 

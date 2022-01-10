@@ -1,0 +1,12 @@
+# Disable the "core" backdrop plugins
+disablePlugins:
+  - lando-backdrop
+
+# Make sure we are dogfooding this plugin for testing purposes
+plugins:
+  "@lando/backdrop": /home/runner/work/backdrop/backdrop
+
+# Disable metrics reporting
+stats:
+  - report: false
+    url: https://metrics.lando.dev

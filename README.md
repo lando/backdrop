@@ -1,6 +1,6 @@
 # Lando Backdrop Plugin
 
-The Lando Backdrop plugin service.
+The Lando Backdrop plugin receipe.
 
 ## Installation
 

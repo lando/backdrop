@@ -31,8 +31,8 @@
   },
   "scripts": {
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs --dest _site",
+    "docs:dev": "vuepress dev docs --clean-cache --clean-temp",
+    "docs:build": "vuepress build docs",
     "docs:lint": "eslint -c docs/.eslintrc.json --quiet docs/.vuepress",
     "lint": "eslint --quiet . && yarn docs:lint",
     "release": "bump --prompt --tag --all --push",

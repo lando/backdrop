@@ -51,7 +51,7 @@ tooling:
 
 ## Using xdebug
 
-This is just a passthrough option to the [xdebug setting](https://docs.lando.dev/php.html#toggling-xdebug) that exists on all our [php services](https://docs.lando.dev/php.html). The `tl;dr` is `xdebug: true` enables and configures the php xdebug extension and `xdebug: false` disables it.
+This is just a passthrough option to the [xdebug setting](https://docs.lando.dev/php/config.html#using-xdebug) that exists on all our [php services](https://docs.lando.dev/php). The `tl;dr` is `xdebug: true` enables and configures the php xdebug extension and `xdebug: false` disables it.
 
 ```yaml
 recipe: backdrop
@@ -59,7 +59,7 @@ config:
   xdebug: true|false
 ```
 
-However, for more information we recommend you consult the [php service documentation](https://docs.lando.dev/php.html).
+However, for more information we recommend you consult the [php service documentation](https://docs.lando.dev/php).
 
 ## Importing Your Database
 

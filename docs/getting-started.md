@@ -17,6 +17,9 @@ Before you get started with this recipe we assume that you have:
 Try out the relevant commands below to spin up a new Landoified vanilla Backdrop site.
 
 ```bash
+# Create folder and enter it
+mkdir backdrop && cd backdrop
+
 # Initialize a backdrop recipe using the latest backdrop version
 lando init \
   --source remote \

@@ -1,4 +1,6 @@
-## IN DEVELOPMENT
+## v0.6.0 - [September 8, 2022](https://github.com/lando/backdrop/releases/tag/v0.6.0)
+
+* Hyperdrived
 
 ## v0.5.1 - [April 21, 2022](https://github.com/lando/backdrop/releases/tag/v0.5.1)
 

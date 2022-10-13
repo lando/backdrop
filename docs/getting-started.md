@@ -37,10 +37,10 @@ lando info
 # Enter folder and install Backdrop, Drush integration is included in Lando
 # https://github.com/backdrop-contrib/backdrop-drush-extension
 cd backdrop
-drush site:install --db-url=mysql://backdrop:backdrop@database/backdrop -y
+lando drush site:install --db-url=mysql://backdrop:backdrop@database/backdrop -y
 
 # Create a one time login link, to log in as administrator
-drush uli -l https://my-first-backdrop-app.lndo.site/
+lando drush uli -l https://my-first-backdrop-app.lndo.site/
 ```
 
 ## Custom Installation

@@ -1,6 +1,7 @@
-const customTheme = require('@lando/vuepress-theme-default-plus');
+import {defineUserConfig} from '@vuepress/cli';
+import {defaultThemePlus} from '@lando/vuepress-theme-default-plus';
 
-module.exports = {
+export default defineUserConfig({
   lang: 'en-US',
   title: 'Lando',
   description: 'Lando Backdrop Plugin Documentation',
@@ -38,4 +39,4 @@ module.exports = {
       '/development.html',
     ],
   }),
-};
+});

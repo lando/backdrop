@@ -14,7 +14,7 @@ export default defineUserConfig({
     ['link', {rel: 'preconnect', href: '//fonts.gstatic.com', crossorigin: true}],
     ['link', {rel: 'stylesheet', href: '//fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap'}],
   ],
-  theme: customTheme({
+  theme: defaultThemePlus({
     landoDocs: true,
     logo: '/images/icon.svg',
     docsDir: 'docs',

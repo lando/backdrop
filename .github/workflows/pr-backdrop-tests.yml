@@ -12,6 +12,7 @@ jobs:
       matrix:
         leia-tests:
           - examples/backdrop
+          - examples/backdrop-mysql8
         lando-versions:
           - edge
         os:

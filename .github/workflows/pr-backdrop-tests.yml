@@ -15,7 +15,7 @@ jobs:
           - examples/backdrop
           - examples/backdrop-mysql8
         lando-version:
-          - edge
+          - 3-dev
         os:
           - ubuntu-22.04
         node-version:

@@ -17,10 +17,10 @@ lando poweroff
 # Should initialize the latest Backdrop codebase
 rm -rf backdrop && mkdir -p backdrop && cd backdrop
 lando init --source remote --remote-url https://github.com/backdrop/backdrop/releases/download/1.20.3/backdrop.zip --recipe backdrop --webroot backdrop --name lando-backdrop
+cp -f ../../.lando.local.yml .lando.local.yml && cat .lando.local.yml
 
 # Should start up successfully
 cd backdrop
-echo -e "\nplugins:\n  \"@lando/backdrop/\": ./../../" >> .lando.yml
 lando start
 ```
 

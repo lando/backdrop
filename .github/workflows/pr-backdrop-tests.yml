@@ -43,7 +43,7 @@ jobs:
           lando-version: ${{ matrix.lando-version }}
           config: |
             setup.skipCommonPlugins=true
-            setup.plugins.@lando/apache=/home/runner/work/apache/apache
+            setup.plugins.@lando/backdrop=/home/runner/work/backdrop/backdrop
           telemetry: false
       - name: Run Leia Tests
         uses: lando/run-leia-action@v2

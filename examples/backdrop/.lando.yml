@@ -1,0 +1,6 @@
+name: backdrop
+recipe: backdrop
+
+# do not remove this
+plugins:
+  "@lando/backdrop": ../..

@@ -11,7 +11,7 @@ module.exports = {
   name: 'backdrop',
   parent: '_recipe',
   config: {
-    backdrush: false,
+    backdrush: '1.4.0',
     bee: '1.x-1.x',
     build: [],
     build_internal: [],

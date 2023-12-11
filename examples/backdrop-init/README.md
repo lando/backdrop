@@ -19,7 +19,6 @@ rm -rf mysql8 && mkdir -p mysql8 && cd mysql8
 lando init --source remote --remote-url https://github.com/backdrop/backdrop/releases/download/1.20.3/backdrop.zip --recipe backdrop --webroot backdrop --name lando-backdrop-mysql8 --option database=mysql:8.0.22
 cp -f ../../.lando.local.yml .lando.local.yml && cat .lando.local.yml
 
-
 # Should start up successfully
 cd mysql8
 lando start

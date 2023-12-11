@@ -1,5 +1,8 @@
 name: backdrop
 recipe: backdrop
+config:
+  database: mysql:5.7
+  via: nginx:1.18
 
 # do not remove this
 plugins:

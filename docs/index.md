@@ -12,10 +12,10 @@ Lando offers a configurable [recipe](https://docs.lando.dev/config/recipes.html)
 
 #### Features of this plugin:
 
-* Configurable `php` version from `5.3` all the way to `8.1`
+* Configurable `php` version from `5.3` all the way to `8.2`
 * Configurable `webroot`
 * Configurable web server (`apache` or `nginx`)
 * Configurable database backend (`mariadb` or `mysql`)
 * Configurable `composer`
-* `backdrop-drush-extension`
+* [`bee`](https://github.com/backdrop-contrib/bee)
 * `xdebug`

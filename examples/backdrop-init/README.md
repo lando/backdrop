@@ -1,9 +1,8 @@
-Backdrop Example
-================
+# Backdrop Init Example
 
 This example exists primarily to test the following documentation:
 
-* [Backdrop Recipe](https://docs.devwithlando.io/tutorials/backdrop.html)
+* [Backdrop Recipe](https://docs.lando.dev/backdrop/getting-started.html)
 
 Start up tests
 --------------
@@ -14,10 +13,10 @@ Run the following commands to get up and running with this example.
 # Should poweroff
 lando poweroff
 
-# Should initialize the latest Backdrop codebase
+# Should clone Backdrop code and init a backdrop recipe landofile
 rm -rf backdrop && mkdir -p backdrop && cd backdrop
-lando init --source remote --remote-url https://github.com/backdrop/backdrop/releases/download/1.20.3/backdrop.zip --recipe backdrop --webroot backdrop --name lando-backdrop
-cp -f ../../.lando.local.yml .lando.local.yml && cat .lando.local.yml
+lando init --source remote --remote-url https://github.com/backdrop/backdrop/releases/download/1.26.2/backdrop.zip --recipe backdrop --webroot backdrop --name backdrop
+cp -f ../../.lando.upstream.yml .lando.upstream.yml && cat .lando.upstream.yml
 
 # Should start up successfully
 cd backdrop
@@ -34,34 +33,36 @@ Run the following commands to validate things are rolling as they should.
 cd backdrop
 lando ssh -s appserver -c "curl -L localhost" | grep "Backdrop CMS 1"
 
-# Should use 7.4 as the default php version
+# Should use 8.2 as the default php version
 cd backdrop
-lando php -v | grep "PHP 7.4"
+lando php -v | grep "PHP 8.2"
 
 # Should be running apache 2.4 by default
 cd backdrop
 lando ssh -s appserver -c "apachectl -V | grep 2.4"
 lando ssh -s appserver -c "curl -IL localhost" | grep Server | grep 2.4
 
-# Should be running mysql 5.7 by default
+# Should be running mariadb 10.6 by default
 cd backdrop
-lando mysql -V | grep 5.7
+lando mysql -V | grep 10.6 | grep MariaDB
 
 # Should not enable xdebug by default
 cd backdrop
 lando php -m | grep xdebug || echo $? | grep 1
 
-# Should use the default database connection info
+# Should be able to connect to the database with the default creds
 cd backdrop
-lando mysql -ubackdrop -pbackdrop backdrop -e quit
+lando mysql backdrop -e quit
 
-# Should be able to install Backdrop
+# Should use bee 1.x-1.x by default
 cd backdrop/backdrop
-lando drush si --db-url=mysql://backdrop:backdrop@database/backdrop -y
+lando bee version | grep "Bee for Backdrop CMS" | grep "1.x-1.x"
 
-# Should use drush 8.3.x by default
+# Should be able to install Backdrop with bee and verify it installed
 cd backdrop/backdrop
-lando drush version | grep 8.3
+chmod +x core/scripts/*
+lando bee site-install --db-name=backdrop --db-user=backdrop --db-pass=backdrop --db-host=database --username=admin --password=a --email=mike@lando.dev --site-name="Vibes Rising" --auto
+lando bee status | grep "Site name" | grep "Vibes Rising"
 ```
 
 Destroy tests

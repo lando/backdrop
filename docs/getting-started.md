@@ -34,13 +34,12 @@ lando start
 # List information about this app.
 lando info
 
-# Enter folder and install Backdrop, Drush integration is included in Lando
-# https://github.com/backdrop-contrib/backdrop-drush-extension
+# Enter folder and install Backdrop
 cd backdrop
-lando drush site:install --db-url=mysql://backdrop:backdrop@database/backdrop -y
+lando bee site-install
 
 # Create a one time login link, to log in as administrator
-lando drush uli -l https://my-first-backdrop-app.lndo.site/
+lando bee uli
 ```
 
 ## Custom Installation
@@ -50,23 +49,9 @@ This plugin is included with Lando by default. That means if you have Lando vers
 However if you would like to manually install the plugin, update it to the bleeding edge or install a particular version then use the below. Note that this installation method requires Lando `3.5.0+`.
 
 :::: code-group
-::: code-group-item DOCKER
+::: code-group-item LANDO 3.21+
 ```bash:no-line-numbers
-# Ensure you have a global plugins directory
-mkdir -p ~/.lando/plugins
-
-# Install plugin
-# NOTE: Modify the "yarn add @lando/backdrop" line to install a particular version eg
-# yarn add @lando/platform@0.5.2
-docker run --rm -it -v ${HOME}/.lando/plugins:/plugins -w /tmp node:14-alpine sh -c \
-  "yarn init -y \
-  && yarn add @lando/backdrop --production --flat --no-default-rc --no-lockfile --link-duplicates \
-  && yarn install --production --cwd /tmp/node_modules/@lando/backdrop \
-  && mkdir -p /plugins/@lando \
-  && mv --force /tmp/node_modules/@lando/backdrop /plugins/@lando/backdrop"
-
-# Rebuild the plugin cache
-lando --clear
+lando plugin-add @lando/backdrop
 ```
 :::
 ::: code-group-item HYPERDRIVE
@@ -75,6 +60,26 @@ lando --clear
 # @NOTE: This doesn't actaully work yet
 hyperdrive install @lando/backdrop
 ```
+:::
+::: code-group-item DOCKER
+```bash:no-line-numbers
+# Ensure you have a global plugins directory
+mkdir -p ~/.lando/plugins
+
+# Install plugin
+# NOTE: Modify the "npm install @lando/backdrop" line to install a particular version eg
+# npm install @lando/platform@0.5.2
+docker run --rm -it -v ${HOME}/.lando/plugins:/plugins -w /tmp node:14-alpine sh -c \
+  "npm init -y \
+  && npm install @lando/backdrop --production --flat --no-default-rc --no-lockfile --link-duplicates \
+  && npm install --production --cwd /tmp/node_modules/@lando/backdrop \
+  && mkdir -p /plugins/@lando \
+  && mv --force /tmp/node_modules/@lando/backdrop /plugins/@lando/backdrop"
+
+# Rebuild the plugin cache
+lando --clear
+```
+:::
 ::::
 
 You should be able to verify the plugin is installed by running `lando config --path plugins` and checking for `@lando/backdrop`. This command will also show you _where_ the plugin is being loaded from.

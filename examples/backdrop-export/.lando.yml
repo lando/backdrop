@@ -1,0 +1,6 @@
+name: backdrop-exports
+recipe: backdrop
+
+# do not remove this
+plugins:
+  "@lando/backdrop": ../..

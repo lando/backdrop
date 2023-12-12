@@ -22,7 +22,7 @@ Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should serve from web folder
-lando ssh -s appserver_nginx -c "curl -L localhost" | grep "NGINX"
+lando ssh -s appserver -c "curl -L appserver_nginx" | grep "NGINX"
 
 # Should run using nginx if specified
 lando ssh -s appserver -c "curl -IL appserver_nginx" | grep Server | grep nginx

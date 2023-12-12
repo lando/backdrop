@@ -29,12 +29,12 @@ lando db-import mysql-test.sql
 lando mysql backdrop -e "show tables;" | grep users
 
 # Should be able to import into user specified database
-lando db-import -h backdrop mysql-test.sql
+lando db-import -h database mysql-test.sql
 lando mysql backdrop -e "show tables;" | grep users
 
 # Should be able to export the contents of the dbs
 lando db-export
-lando db-export -h database
+lando db-export -h database another-one.sql
 
 # Should export to filename if specified
 lando db-export database.dump.sql

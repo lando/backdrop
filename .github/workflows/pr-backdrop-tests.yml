@@ -12,8 +12,13 @@ jobs:
       fail-fast: false
       matrix:
         leia-test:
-          - examples/backdrop
+          - examples/backdrop-custom
+          - examples/backdrop-defaults
+          - examples/backdrop-export
+          - examples/backdrop-import
+          - examples/backdrop-init
           - examples/backdrop-mysql8
+          - examples/backdrop-nginx
         lando-version:
           - 3-dev-slim
         os:

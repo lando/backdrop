@@ -12,18 +12,21 @@ Here are the configuration options, set to the default values, for this recipe's
 ```yaml
 recipe: backdrop
 config:
-  php: '7.4'
-  composer_version: '2.0.7'
+  bee: 1.x-1.x
+  composer_version: 2
+  database: mysql:5.7
+  php: 8.2
   via: apache:2.4
   webroot: .
-  database: mysql:5.7
-  backdrush: '1.0.0'
   xdebug: false
   config:
     database: SEE BELOW
     php: SEE BELOW
     server: SEE BELOW
     vhosts: SEE BELOW
+
+  # DEPRECATED
+  backdrush: false
 ```
 
 Note that if the above config options are not enough, all Lando recipes can be further [extended and overriden](https://docs.lando.dev/config/recipes.html#extending-and-overriding-recipes).

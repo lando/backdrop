@@ -5,7 +5,7 @@ const LandoMysql = require('./../node_modules/@lando/mariadb/builders/mariadb.js
 
 // Builder
 module.exports = {
-  name: 'wordpress-mariadb',
+  name: 'backdrop-mariadb',
   parent: '_service',
   builder: (parent, config) => class BackdropMariaDB extends LandoMysql.builder(parent, LandoMysql.config) {
     constructor(id, options = {}) {

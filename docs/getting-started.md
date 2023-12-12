@@ -34,13 +34,12 @@ lando start
 # List information about this app.
 lando info
 
-# Enter folder and install Backdrop, Drush integration is included in Lando
-# https://github.com/backdrop-contrib/backdrop-drush-extension
+# Enter folder and install Backdrop
 cd backdrop
-lando drush site:install --db-url=mysql://backdrop:backdrop@database/backdrop -y
+lando bee site-install
 
 # Create a one time login link, to log in as administrator
-lando drush uli -l https://my-first-backdrop-app.lndo.site/
+lando bee uli
 ```
 
 ## Custom Installation

@@ -1,5 +1,8 @@
 ## v1.0.0 - [December 7, 2023](https://github.com/lando/backdrop/releases/tag/v1.0.0)
 
+* Changed default `php` version to `8.2`
+* Changed default `database` version to `mariadb:10.6`
+* Deprecated `drush` in favor of `bee` [#13](https://github.com/lando/backdrop/issues/13)
 * Dialed fully for `lando update`
 
 ## v0.9.0 - [July 3, 2023](https://github.com/lando/backdrop/releases/tag/v0.9.0)

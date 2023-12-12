@@ -10,10 +10,10 @@ By default, each Lando Backdrop recipe will also ship with helpful dev utilities
 This means you can use things like `drush`, `composer` and `php` via Lando and avoid mucking up your actual computer trying to manage `php` versions and tooling.
 
 ```bash
+lando bee               Runs bee commands
 lando composer          Runs composer commands
 lando db-export [file]  Exports database from a service into a file
 lando db-import <file>  Imports a dump file into database service
-lando drush             Runs drush commands
 lando mysql             Drops into a MySQL shell on a database service
 lando php               Runs php commands
 ```
@@ -21,8 +21,8 @@ lando php               Runs php commands
 **Usage examples**
 
 ```bash
-# Download a dependency with drush
-lando drush dl webform
+# Download a dependency with bee
+lando bee dl webform
 
 # Check the app's installed php extensions
 lando php -m
@@ -30,23 +30,21 @@ lando php -m
 
 You can also run `lando` from inside your app directory for a complete list of commands. This is always advisable as your list of commands may not be 100% the same as above.
 
-## Using Drush
-
-By default, our Backdrop recipe will globally install the [latest version of Drush 8](http://docs.drush.org/en/8.x/install/) as well as the latest version of [Backdrop Drush](https://github.com/backdrop-contrib/drush). This means that you should be able to use `lando drush` out of the box.
+## Using bee
 
 #### Configuring your root directory
 
-If you are using a webroot besides `.`, you will need to `cd` into that directory and run `lando drush` from there. This is because many site-specific `drush` commands will only run correctly if you run `drush` from a directory that also contains a Backdrop site.
+If you are using a webroot besides `.`, you will need to `cd` into that directory and run `lando bee` from there. This is because many site-specific `bee` commands will only run correctly if you run `bee` from a directory that also contains a Backdrop site.
 
-If you are annoyed by having to `cd` into that directory every time you run a `drush` command, you can get around it by [overriding](https://docs.lando.dev/config/tooling.html#overriding) the `drush` tooling command in your [Landofile](https://docs.lando.dev/config/lando.html) so that Drush always runs from your `webroot`.
+If you are annoyed by having to `cd` into that directory every time you run a `bee` command, you can get around it by [overriding](https://docs.lando.dev/config/tooling.html#overriding) the `bee` tooling command in your [Landofile](https://docs.lando.dev/config/lando.html) so that Drush always runs from your `webroot`.
 
-**Note that hard coding the `root` like this may have unforeseen and bad consequences for some `drush` commands such as `drush scr`.**
+**Note that hard coding the `root` like this may have unforeseen and bad consequences for some `bee` commands such as `bee scr`.**
 
 ```yaml
 tooling:
   drush:
     service: appserver
-    cmd: drush --root=/app/PATH/TO/WEBROOT
+    cmd: /usr/local/bin/bee --root=/app/webroot
 ```
 
 ## Using xdebug

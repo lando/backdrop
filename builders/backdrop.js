@@ -70,13 +70,6 @@ module.exports = {
       options.tooling = _.merge({}, require('../utils/get-tooling')(options), options.tooling);
       options.proxy = _.merge({}, require('../utils/get-proxy')(options), options.proxy);
 
-      // @TODO: tests
-        // add bee/backdrush/drush to tooling
-        // nginx version
-        // db versions
-        // default config file placement
-        // custom config
-
       // Downstream
       super(id, options);
     };

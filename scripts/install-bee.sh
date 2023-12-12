@@ -16,3 +16,6 @@ mkdir -p /tmp /usr/local/bin /var/www/.bee
 
 # fetch
 wget -qO "$btmp.zip" "$burl" && unzip -qo "$btmp.zip" -d "/var/www/.bee" && rm "$btmp.zip"
+
+# replace symlink
+ln -sf /var/www/.bee/${bfolder}/bee.php /usr/local/bin/bee

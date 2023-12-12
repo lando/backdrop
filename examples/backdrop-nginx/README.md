@@ -1,4 +1,4 @@
-# Backdrop MySQL 8Example
+# Backdrop Nginx Example
 
 This example exists primarily to test the following documentation:
 
@@ -22,20 +22,16 @@ Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should serve from web folder
-lando ssh -s appserver -c "curl -L localhost" | grep "MYSQL8"
+lando ssh -s appserver_nginx -c "curl -L localhost" | grep "NGINX"
 
-# Should be running apache 2.4 by default
-lando ssh -s appserver -c "apachectl -V | grep 2.4"
-lando ssh -s appserver -c "curl -IL localhost" | grep Server | grep 2.4
+# Should run using nginx if specified
+lando ssh -s appserver -c "curl -IL appserver_nginx" | grep Server | grep nginx
 
-# Should use php 5.6 if specified by user
-lando php -v | grep "PHP 5.6"
+# Should use nginx 1.25 by defualt
+lando nginx -v 2>&1 | grep "nginx version" | grep "nginx/1.25"
 
-# Should be running mysql 8 if specified by user
-lando mysql -V | grep "mysql"| grep "Ver 8.0.22"
-
-# Should be able to connect to the database with the default creds
-lando mysql backdrop -e quit
+# Should use the php version specified by the user eg 7.4
+lando php -v | grep "PHP 7.4"
 ```
 
 Destroy tests

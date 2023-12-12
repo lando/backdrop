@@ -1,8 +1,9 @@
-name: backdrop
+name: backdrop-mysql8
 recipe: backdrop
 config:
-  database: mysql:5.7
-  via: nginx:1.18
+  webroot: web
+  php: 5.6
+  database: mysql:8.0.22
 
 # do not remove this
 plugins:

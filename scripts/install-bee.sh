@@ -15,4 +15,4 @@ rm -rf "$btmp" "$btmp.zip" "/var/www/.bee/$bfolder"
 mkdir -p /tmp /usr/local/bin /var/www/.bee
 
 # fetch
-wget -qO "$btmp.zip" "$burl" && unzip -qo "$btmp.zip" -d "var/www/.bee" && rm "$btmp.zip"
+wget -qO "$btmp.zip" "$burl" && unzip -qo "$btmp.zip" -d "/var/www/.bee" && rm "$btmp.zip"

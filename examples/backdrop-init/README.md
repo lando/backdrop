@@ -1,9 +1,8 @@
-Backdrop Example
-================
+# Backdrop Init Example
 
 This example exists primarily to test the following documentation:
 
-* [Backdrop Recipe](https://docs.devwithlando.io/tutorials/backdrop.html)
+* [Backdrop Recipe](https://docs.lando.dev/backdrop/getting-started.html)
 
 Start up tests
 --------------
@@ -14,13 +13,13 @@ Run the following commands to get up and running with this example.
 # Should poweroff
 lando poweroff
 
-# Should initialize the latest Backdrop codebase
-rm -rf mysql8 && mkdir -p mysql8 && cd mysql8
-lando init --source remote --remote-url https://github.com/backdrop/backdrop/releases/download/1.20.3/backdrop.zip --recipe backdrop --webroot backdrop --name lando-backdrop-mysql8 --option database=mysql:8.0.22
-cp -f ../../.lando.local.yml .lando.local.yml && cat .lando.local.yml
+# Should clone Backdrop code and init a backdrop recipe landofile
+rm -rf backdrop && mkdir -p backdrop && cd backdrop
+lando init --source remote --remote-url https://github.com/backdrop/backdrop/releases/download/1.26.2/backdrop.zip --recipe backdrop --webroot backdrop --name backdrop
+cp -f ../../.lando.upstream.yml .lando.upstream.yml && cat .lando.upstream.yml
 
 # Should start up successfully
-cd mysql8
+cd backdrop
 lando start
 ```
 
@@ -31,37 +30,39 @@ Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should return the Backdrop installation page by default
-cd mysql8
+cd backdrop
 lando ssh -s appserver -c "curl -L localhost" | grep "Backdrop CMS 1"
 
-# Should use 7.4 as the default php version
-cd mysql8
-lando php -v | grep "PHP 7.4"
+# Should use 8.2 as the default php version
+cd backdrop
+lando php -v | grep "PHP 8.2"
 
 # Should be running apache 2.4 by default
-cd mysql8
+cd backdrop
 lando ssh -s appserver -c "apachectl -V | grep 2.4"
 lando ssh -s appserver -c "curl -IL localhost" | grep Server | grep 2.4
 
-# Should be running mysql 8.0.x by default
-cd mysql8
-lando mysql -V | grep 8.0
+# Should be running mariadb 10.6 by default
+cd backdrop
+lando mysql -V | grep 10.6 | grep MariaDB
 
 # Should not enable xdebug by default
-cd mysql8
+cd backdrop
 lando php -m | grep xdebug || echo $? | grep 1
 
-# Should use the default database connection info
-cd mysql8
-lando mysql -ubackdrop -pbackdrop backdrop -e quit
+# Should be able to connect to the database with the default creds
+cd backdrop
+lando mysql backdrop -e quit
 
-# Should be able to install Backdrop
-cd mysql8/backdrop
-lando drush si --db-url=mysql://backdrop:backdrop@database/backdrop -y
+# Should use bee 1.x-1.x by default
+cd backdrop/backdrop
+lando bee version | grep "Bee for Backdrop CMS" | grep "1.x-1.x"
 
-# Should use drush 8.3.x by default
-cd mysql8/backdrop
-lando drush version | grep 8.3
+# Should be able to install Backdrop with bee and verify it installed
+cd backdrop/backdrop
+chmod +x core/scripts/*
+lando bee site-install --db-name=backdrop --db-user=backdrop --db-pass=backdrop --db-host=database --username=admin --password=a --email=mike@lando.dev --site-name="Vibes Rising" --auto
+lando bee status | grep "Site name" | grep "Vibes Rising"
 ```
 
 Destroy tests
@@ -71,7 +72,7 @@ Run the following commands to trash this app like nothing ever happened.
 
 ```bash
 # Should be destroyed with success
-cd mysql8
+cd backdrop
 lando destroy -y
 lando poweroff
 ```

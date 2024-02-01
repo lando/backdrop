@@ -33,7 +33,7 @@ Note that if the above config options are not enough, all Lando recipes can be f
 
 ## Choosing a php version
 
-You can set `php` to any version that is available in our [php service](https://docs.lando.dev/php). However, you should consult the [Backdrop requirements](https://backdropcms.org/requirements) to make sure that version is actually supported by Backdrop itself.
+You can set `php` to any version that is available in our [php service](https://docs.lando.dev/php). However, you should consult the [Backdrop requirements](https://docs.backdropcms.org/documentation/system-requirements) to make sure that version is actually supported by Backdrop itself.
 
 The [recipe config](https://docs.lando.dev/core/v3/recipes.html#config) to set the Backdrop recipe to use `php` version `5.5` is shown below:
 
@@ -107,7 +107,7 @@ config:
 
 ## Connecting to your database
 
-Unlike other unnamed php-based CMSes, Backdrop's database connection information can be set by an environmental variable named [`BACKDROP_SETTINGS`](https://api.backdropcms.org/api/backdrop/core%21includes%21bootstrap.inc/function/backdrop_settings_initialize/1). Lando will set this variable for you which means that unless you explicitly hijack the default functionality, *you should not need to do anything* to configure your database connection.
+Unlike other unnamed php-based CMSes, Backdrop's database connection information can be set by an environmental variable named [`BACKDROP_SETTINGS`](https://docs.backdropcms.org/api/backdrop/core%21includes%21bootstrap.inc/function/backdrop_settings_initialize/1). Lando will set this variable for you which means that unless you explicitly hijack the default functionality, *you should not need to do anything* to configure your database connection.
 
 You can also examine and use this variable in-code similarly to how you would with [`LANDO_INFO`](https://docs.lando.dev/guides/lando-info.html).
 
@@ -131,7 +131,7 @@ You can get also get the above information, and more, by using the [`lando info`
 
 ## Using custom config files
 
-You may need to override our [default Backdrop config](https://github.com/lando/backdrop/tree/main/recipes/backdrop) with your own.
+You may need to override our [default Backdrop config](https://github.com/lando/backdrop/tree/main/builders/backdrop.js) with your own.
 
 If you do this, you must use files that exist inside your application and express them relative to your project root as shown below:
 

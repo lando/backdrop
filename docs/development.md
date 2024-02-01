@@ -19,7 +19,7 @@ At the very least you will need to have the following installed:
 
 ```sh
 # Clone this repo
-git clone https://github.com/lando/backdrop.git && cd backdrop
+git clone https://github.com/lando/backdrop && cd backdrop
 
 # Install deps
 npm install
@@ -162,4 +162,3 @@ npm install @lando/backdrop@edge
 
 ## Contribution
 
-If you want to contribute code then just follow [this flow](https://docs.github.com/en/get-started/using-github/github-flow).

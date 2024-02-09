@@ -79,7 +79,7 @@ By default, this recipe will use the default version of our [mysql](https://docs
 
 If you are unsure about how to configure the `database`, we *highly recommend* you check out both the [mysql](https://docs.lando.dev/mysql) and [mariadb](https://docs.lando.dev/mariadb) services before you change the default.
 
-Also note that like the configuration of the `php` version, you should consult the [Backdrop requirements](https://backdropcms.org/requirements) to make sure the `database` and `version` you select is actually supported by Backdrop itself.
+Also note that like the configuration of the `php` version, you should consult the [Backdrop requirements](https://docs.backdropcms.org/documentation/system-requirements) to make sure the `database` and `version` you select is actually supported by Backdrop itself.
 
 #### Using MySQL (default)
 

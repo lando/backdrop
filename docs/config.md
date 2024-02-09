@@ -5,9 +5,9 @@ description: Learn how to configure the Lando Backdrop recipe.
 
 # Configuration
 
-While Lando [recipes](https://docs.lando.dev/config/recipes.html) set sane defaults so they work out of the box, they are also [configurable](https://docs.lando.dev/config/recipes.html#config).
+While Lando [recipes](https://docs.lando.dev/core/v3/recipes.html) set sane defaults so they work out of the box, they are also [configurable](https://docs.lando.dev/core/v3/recipes.html#config).
 
-Here are the configuration options, set to the default values, for this recipe's [Landofile](https://docs.lando.dev/config/lando.html). If you are unsure about where this goes or what this means, we *highly recommend* scanning the [recipes documentation](https://docs.lando.dev/config/recipes.html) to get a good handle on how the magicks work.
+Here are the configuration options, set to the default values, for this recipe's [Landofile](https://docs.lando.dev/core/v3). If you are unsure about where this goes or what this means, we *highly recommend* scanning the [recipes documentation](https://docs.lando.dev/core/v3/recipes.html) to get a good handle on how the magicks work.
 
 ```yaml
 recipe: backdrop
@@ -29,13 +29,13 @@ config:
   backdrush: false
 ```
 
-Note that if the above config options are not enough, all Lando recipes can be further [extended and overriden](https://docs.lando.dev/config/recipes.html#extending-and-overriding-recipes).
+Note that if the above config options are not enough, all Lando recipes can be further [extended and overriden](https://docs.lando.dev/core/v3/recipes.html#extending-and-overriding-recipes).
 
 ## Choosing a php version
 
-You can set `php` to any version that is available in our [php service](https://docs.lando.dev/php). However, you should consult the [Backdrop requirements](https://backdropcms.org/requirements) to make sure that version is actually supported by Backdrop itself.
+You can set `php` to any version that is available in our [php service](https://docs.lando.dev/php). However, you should consult the [Backdrop requirements](https://docs.backdropcms.org/documentation/system-requirements) to make sure that version is actually supported by Backdrop itself.
 
-The [recipe config](https://docs.lando.dev/config/recipes.html#config) to set the Backdrop recipe to use `php` version `5.5` is shown below:
+The [recipe config](https://docs.lando.dev/core/v3/recipes.html#config) to set the Backdrop recipe to use `php` version `5.5` is shown below:
 
 ```yaml
 recipe: backdrop
@@ -79,7 +79,7 @@ By default, this recipe will use the default version of our [mysql](https://docs
 
 If you are unsure about how to configure the `database`, we *highly recommend* you check out both the [mysql](https://docs.lando.dev/mysql) and [mariadb](https://docs.lando.dev/mariadb) services before you change the default.
 
-Also note that like the configuration of the `php` version, you should consult the [Backdrop requirements](https://backdropcms.org/requirements) to make sure the `database` and `version` you select is actually supported by Backdrop itself.
+Also note that like the configuration of the `php` version, you should consult the [Backdrop requirements](https://docs.backdropcms.org/documentation/system-requirements) to make sure the `database` and `version` you select is actually supported by Backdrop itself.
 
 #### Using MySQL (default)
 
@@ -107,7 +107,7 @@ config:
 
 ## Connecting to your database
 
-Unlike other unnamed php-based CMSes, Backdrop's database connection information can be set by an environmental variable named [`BACKDROP_SETTINGS`](https://api.backdropcms.org/api/backdrop/core%21includes%21bootstrap.inc/function/backdrop_settings_initialize/1). Lando will set this variable for you which means that unless you explicitly hijack the default functionality, *you should not need to do anything* to configure your database connection.
+Unlike other unnamed php-based CMSes, Backdrop's database connection information can be set by an environmental variable named [`BACKDROP_SETTINGS`](https://docs.backdropcms.org/api/backdrop/core%21includes%21bootstrap.inc/function/backdrop_settings_initialize/1). Lando will set this variable for you which means that unless you explicitly hijack the default functionality, *you should not need to do anything* to configure your database connection.
 
 You can also examine and use this variable in-code similarly to how you would with [`LANDO_INFO`](https://docs.lando.dev/guides/lando-info.html).
 
@@ -131,7 +131,7 @@ You can get also get the above information, and more, by using the [`lando info`
 
 ## Using custom config files
 
-You may need to override our [default Backdrop config](https://github.com/lando/backdrop/tree/main/recipes/backdrop) with your own.
+You may need to override our [default Backdrop config](https://github.com/lando/backdrop/tree/main/builders) with your own.
 
 If you do this, you must use files that exist inside your application and express them relative to your project root as shown below:
 

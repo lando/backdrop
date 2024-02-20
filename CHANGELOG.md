@@ -1,3 +1,7 @@
+## v1.1.0 - [February 20, 2024](https://github.com/lando/backdrop/releases/tag/v1.1.0)
+
+* Included ability to specify `database: mssql` in the `config` section to maintain backwards compatibility. [@lando/mssql#31](https://github.com/lando/mssql/issues/31)
+
 ## v1.0.0 - [December 7, 2023](https://github.com/lando/backdrop/releases/tag/v1.0.0)
 
 * Changed default `php` version to `8.2`

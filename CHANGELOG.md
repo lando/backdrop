@@ -5,6 +5,10 @@
 * Added support for `php:8.3`.
 * Added config testing.
 
+### Fixes
+
+* Fixed `CRITICAL` issue with default config files not loading correctly
+
 ### Internal
 
 * Updated to `@lando/php@1.2.0`

@@ -19,7 +19,9 @@ module.exports = {
     build_as_root_internal: [],
     confSrc: path.resolve(__dirname, '..', 'config'),
     composer_version: '2',
-    defaultFiles: {},
+    defaultFiles: {
+      php: 'php.ini',
+    },
     database: 'mariadb:10.6',
     drush: '8.4.12',
     php: '8.2',
@@ -59,7 +61,6 @@ module.exports = {
 
       // Rebase on top of any default config we might already have
       options.defaultFiles = _.merge({}, require('../utils/get-config-defaults')(_.cloneDeep(options)), options.defaultFiles); // eslint-disable-line max-len
-
       // add relevant build steps for backdrush
       if (options.backdrush !== false) options.build.unshift(require('../utils/get-backdrush')(options));
       // add relevant build steps for bee

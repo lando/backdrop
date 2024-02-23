@@ -38,7 +38,6 @@ lando mysql -V | grep "mysql"| grep "Ver 8.0.22"
 lando mysql backdrop -e quit
 
 # Should use the defauly mysql8 config file
-cd mysql8
 lando ssh -s database -c "cat /opt/bitnami/mysql/conf/my_custom.cnf" | grep "LANDOBACKDROPMYSQL8CNF"
 lando mysql -u root -e "show variables;" | grep innodb_lock_wait_timeout | grep 127
 ```

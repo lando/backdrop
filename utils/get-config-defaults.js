@@ -3,7 +3,6 @@
 // Modules
 const _ = require('lodash');
 const fs = require('fs');
-const { exit } = require('process');
 
 module.exports = options => {
   // Get the viaconf

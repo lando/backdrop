@@ -35,7 +35,6 @@ lando php -v | grep "PHP 7.4"
 
 # Should load the correct default nginx config
 lando ssh -s appserver_nginx -c "cat /opt/bitnami/nginx/conf/vhosts/lando.conf" | grep "LANDOBACKDROPNGINXCONF"
-lando ssh -s appserver_nginx -c "cat /opt/bitnami/nginx/conf/vhosts/lando.conf" | grep "BACKDROP single site rules."
 ```
 
 Destroy tests

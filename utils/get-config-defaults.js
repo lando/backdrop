@@ -6,7 +6,7 @@ const fs = require('fs');
 
 module.exports = options => {
   // Get the viaconf
-  if (options.webserver.type === 'nginx') options.defaultFiles.vhosts = 'default.conf.tpl';
+  if (_.startsWith(options.via, 'nginx')) options.defaultFiles.vhosts = 'default.conf.tpl';
 
   // Get the default db conf
   const dbConfig = _.get(options, 'database', 'mysql');
@@ -26,4 +26,7 @@ module.exports = options => {
       delete options.defaultFiles[type];
     }
   });
+
+  // Return
+  return options.defaultFiles;
 };

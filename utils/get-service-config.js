@@ -2,6 +2,7 @@
 
 // Modules
 const _ = require('lodash');
+const path = require('path');
 
 module.exports = (options, types = ['php', 'server', 'vhosts']) => {
   const config = {};

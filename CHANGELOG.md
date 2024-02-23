@@ -1,3 +1,14 @@
+## v1.2.0 - [February 24, 2024](https://github.com/lando/backdrop/releases/tag/v1.2.0)
+
+### New Features
+
+* Added support for `php:8.3`.
+* Added config testing.
+
+### Internal
+
+* Updated to `@lando/php@1.2.0`
+
 ## v1.0.0 - [December 7, 2023](https://github.com/lando/backdrop/releases/tag/v1.0.0)
 
 * Changed default `php` version to `8.2`

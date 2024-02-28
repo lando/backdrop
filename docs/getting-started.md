@@ -23,7 +23,7 @@ mkdir backdrop && cd backdrop
 # Initialize a backdrop recipe using the latest backdrop version
 lando init \
   --source remote \
-  --remote-url https://objects.githubusercontent.com/github-production-release-asset-2e65be/12285928/c6a129e8-867d-45b3-a307-c46e22076739?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240201%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240201T224039Z&X-Amz-Expires=300&X-Amz-Signature=9edb500048b3a1bddb9f26468aa97a4fdb85951e90232de6f590231752dfcb52&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=12285928&response-content-disposition=attachment%3B%20filename%3Dbackdrop.zip&response-content-type=application%2Foctet-stream \
+  --remote-url https://github.com/backdrop/backdrop/releases/latest/download/backdrop.zip \
   --recipe backdrop \
   --webroot backdrop \
   --name my-first-backdrop-app

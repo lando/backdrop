@@ -14,6 +14,8 @@ jobs:
         leia-test:
           - examples/backdrop-custom
           - examples/backdrop-defaults
+          - examples/backdrop-downstreamer-1
+          - examples/backdrop-downstreamer-2
           - examples/backdrop-export
           - examples/backdrop-import
           - examples/backdrop-init

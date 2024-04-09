@@ -40,6 +40,12 @@ If you'd like to report a bug or submit a feature request then please [use the i
 
 We try to log all changes big and small in both [THE CHANGELOG](https://github.com/lando/backdrop/blob/main/CHANGELOG.md) and the [release notes](https://github.com/lando/backdrop/releases).
 
+
+## Maintainers
+
+* [@pirog](https://github.com/pirog)
+* [@reynoldsalec](https://github.com/reynoldsalec)
+
 ## Contributors
 
 <a href="https://github.com/lando/backdrop/graphs/contributors">

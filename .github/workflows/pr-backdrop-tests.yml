@@ -19,6 +19,7 @@ jobs:
           - examples/backdrop-export
           - examples/backdrop-import
           - examples/backdrop-init
+          - examples/backdrop-mariadb
           - examples/backdrop-mysql8
           - examples/backdrop-nginx
         lando-version:

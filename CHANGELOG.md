@@ -1,3 +1,6 @@
+## UNRELEASED - [DATE_TBD](https://github.com/lando/backdrop/releases/tag/UNRELEASED)
+  * Update mariadb plugin. [#51](https://github.com/lando/mariadb/issues/51)
+
 ## v1.3.0 - [March 8, 2024](https://github.com/lando/backdrop/releases/tag/v1.3.0)
   * Updated to latest database services.
 
@@ -5,7 +8,7 @@
 
 ### Fixes
 
-* Improved `database` selection for purposes of `config` loading, fixes some `database` bootup issues when the `database` type is overriden downstream
+* Improved `database` selection for purposes of `config` loading, fixes some `database` bootup issues when the `database` type is overridden downstream
 
 ## v1.2.0 - [February 24, 2024](https://github.com/lando/backdrop/releases/tag/v1.2.0)
 

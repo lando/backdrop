@@ -9,7 +9,7 @@ const landoPlugin = name.replace('@lando/', '');
 
 export default defineConfig({
   title: 'Lando Backdrop Plugin',
-  description: 'The offical Lando plugin for Backdrop.',
+  description: 'The official Lando plugin for Backdrop.',
   landoDocs: 3,
   landoPlugin,
   version,

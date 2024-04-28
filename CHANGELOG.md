@@ -1,3 +1,6 @@
+## UNRELEASED - [DATE_TBD](https://github.com/lando/backdrop/releases/tag/UNRELEASED)
+  * Fix spelling errors. [#48](https://github.com/lando/backdrop/issues/48)
+
 ## v1.3.0 - [March 8, 2024](https://github.com/lando/backdrop/releases/tag/v1.3.0)
   * Updated to latest database services.
 

@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: npm clean-install --prefer-offline --frozen-lockfile
 
-      # Let's do tests rq just to make sure we dont push something that is fundamentally broken
+      # Let's do tests real quick just to make sure we don't push something that is fundamentally broken
       - name: Lint code
         run: npm run lint
       - name: Run unit tests

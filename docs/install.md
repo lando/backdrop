@@ -19,7 +19,7 @@ lando plugin-add @lando/backdrop
 ```
 
 ```sh [hyperdrive]
-# @NOTE: This doesn't actaully work yet
+# @NOTE: This doesn't actually work yet
 hyperdrive install @lando/backdrop
 ```
 

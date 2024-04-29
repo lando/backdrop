@@ -12,7 +12,7 @@ durl="https://github.com/drush-ops/drush/releases/download/${drush}/drush.phar"
 dtmp="/tmp/drush.phar"
 dbin="/usr/local/bin/drush"
 
-# install drush if we dont have it
+# install drush if we don't have it
 # @TODO: what about different versions? in the recipe maybe some validation?
 if ! command -v drush &> /dev/null; then
   # cleanup

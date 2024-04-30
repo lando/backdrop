@@ -42,6 +42,18 @@ module.exports = ({
     service: 'appserver',
     cmd: 'php',
   },
+  'mysql': {
+    service: ':host',
+    description: 'Drops into a MySQL shell on a database service',
+    cmd: 'mysql -uroot',
+    options: {
+      host: {
+        description: 'The database service to use',
+        default: 'database',
+        alias: ['h'],
+      },
+    },
+  },
   'mariadb': {
     service: ':host',
     description: 'Drops into a MariaDB shell on a database service',

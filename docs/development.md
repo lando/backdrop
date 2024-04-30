@@ -36,7 +36,7 @@ plugins:
   "@lando/backdrop": ../..
 ```
 
-This tells Lando that _this_ app should use the source version of the `@lando/backdrop` plugin you cloned down in the installation. This is useful because it allows you to isolate development within this repo without interferring with any other apps using the stable and global version of the plugin.
+This tells Lando that _this_ app should use the source version of the `@lando/backdrop` plugin you cloned down in the installation. This is useful because it allows you to isolate development within this repo without interfering with any other apps using the stable and global version of the plugin.
 
 This means that you should _almost always_ develop against apps in the `examples` folder and that those apps should _always_ contain the above `plugins` config. If you have an extant Lando application you want to develop against you can temporarily tell it to use the cloned down version of the plugin with the same line.
 

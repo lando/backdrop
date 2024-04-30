@@ -29,7 +29,7 @@ config:
   backdrush: false
 ```
 
-Note that if the above config options are not enough, all Lando recipes can be further [extended and overriden](https://docs.lando.dev/core/v3/recipes.html#extending-and-overriding-recipes).
+Note that if the above config options are not enough, all Lando recipes can be further [extended and overridden](https://docs.lando.dev/core/v3/recipes.html#extending-and-overriding-recipes).
 
 ## Choosing a php version
 

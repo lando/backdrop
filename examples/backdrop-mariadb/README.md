@@ -32,14 +32,14 @@ lando ssh -s appserver -c "curl -IL localhost" | grep Server | grep 2.4
 lando php -v | grep "PHP 8.3"
 
 # Should be running mariadb 11.3 if specified by user
-lando mysql -V | grep "mysql"| grep "11.3."
+lando mariadb -V | grep "mariadb"| grep "11.3."
 
 # Should be able to connect to the database with the default creds
-lando mysql backdrop -e quit
+lando mariadb backdrop -e quit
 
 # Should use the default mariadb config file
-lando ssh -s database -c "cat /opt/bitnami/mariadb/conf/my_custom.cnf" | grep "LANDOBACKDROPMYSQLCNF"
-lando mysql -u root -e "show variables;" | grep innodb_lock_wait_timeout | grep 127
+lando ssh -s database -c "grep 'innodb_lock_wait_timeout = 121' /opt/bitnami/mariadb/conf/my_custom.cnf"
+lando mariadb -e "show variables;" | grep innodb_lock_wait_timeout | grep 121
 ```
 
 Destroy tests

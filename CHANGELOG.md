@@ -1,4 +1,4 @@
-## UNRELEASED - [DATE_TBD](https://github.com/lando/backdrop/releases/tag/UNRELEASED)
+## v1.4.0 - [May 1, 2024](https://github.com/lando/backdrop/releases/tag/v1.4.0)
   * Fixed spelling errors. [#48](https://github.com/lando/backdrop/issues/48)
   * Updated mariadb plugin. [#51](https://github.com/lando/mariadb/issues/51)
 
@@ -8,7 +8,6 @@
 ## v1.2.1 - [March 4, 2024](https://github.com/lando/backdrop/releases/tag/v1.2.1)
 
 ### Fixes
-
 * Improved `database` selection for purposes of `config` loading, fixes some `database` bootup issues when the `database` type is overridden downstream
 
 ## v1.2.0 - [February 24, 2024](https://github.com/lando/backdrop/releases/tag/v1.2.0)

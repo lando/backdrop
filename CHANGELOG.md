@@ -1,6 +1,6 @@
 ## UNRELEASED - [DATE_TBD](https://github.com/lando/backdrop/releases/tag/UNRELEASED)
-  * Fix spelling errors. [#48](https://github.com/lando/backdrop/issues/48)
-  * Update mariadb plugin. [#51](https://github.com/lando/mariadb/issues/51)
+  * Fixed spelling errors. [#48](https://github.com/lando/backdrop/issues/48)
+  * Updated mariadb plugin. [#51](https://github.com/lando/mariadb/issues/51)
 
 ## v1.3.0 - [March 8, 2024](https://github.com/lando/backdrop/releases/tag/v1.3.0)
   * Updated to latest database services.

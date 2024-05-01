@@ -54,4 +54,16 @@ module.exports = ({
       },
     },
   },
+  'mariadb': {
+    service: ':host',
+    description: 'Drops into a MariaDB shell on a database service',
+    cmd: 'mariadb -uroot',
+    options: {
+      host: {
+        description: 'The database service to use',
+        default: 'database',
+        alias: ['h'],
+      },
+    },
+  },
 });

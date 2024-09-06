@@ -4,8 +4,7 @@ This example exists primarily to test the following documentation:
 
 * [Backdrop Recipe](https://docs.lando.dev/backdrop/getting-started.html)
 
-Start up tests
---------------
+## Start up tests
 
 Run the following commands to get up and running with this example.
 
@@ -23,15 +22,14 @@ cd backdrop
 lando start
 ```
 
-Verification commands
----------------------
+## Verification commands
 
 Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should return the Backdrop installation page by default
 cd backdrop
-lando ssh -s appserver -c "curl -L localhost" | grep "Backdrop CMS 1"
+lando exec appserver -- curl -L localhost | grep "Backdrop CMS 1"
 
 # Should use 8.2 as the default php version
 cd backdrop
@@ -39,8 +37,8 @@ lando php -v | grep "PHP 8.2"
 
 # Should be running apache 2.4 by default
 cd backdrop
-lando ssh -s appserver -c "apachectl -V | grep 2.4"
-lando ssh -s appserver -c "curl -IL localhost" | grep Server | grep 2.4
+lando exec appserver -- apachectl -V | grep 2.4
+lando exec appserver -- curl -IL localhost | grep Server | grep 2.4
 
 # Should be running mariadb 10.6 by default
 cd backdrop
@@ -65,8 +63,7 @@ lando bee site-install --db-name=backdrop --db-user=backdrop --db-pass=backdrop 
 lando bee status | grep "Site name" | grep "Vibes Rising"
 ```
 
-Destroy tests
--------------
+## Destroy tests
 
 Run the following commands to trash this app like nothing ever happened.
 

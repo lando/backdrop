@@ -4,8 +4,7 @@ This example exists primarily to test the following documentation:
 
 * [Backdrop Recipe](https://docs.lando.dev/backdrop/config.html)
 
-Start up tests
---------------
+## Start up tests
 
 Run the following commands to get up and running with this example.
 
@@ -15,21 +14,20 @@ lando poweroff
 lando start
 ```
 
-Verification commands
----------------------
+## Verification commands
 
 Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should serve from app root by default
-lando ssh -s appserver -c "curl -L localhost" | grep "DEFAULTS"
+lando exec appserver -- curl -L localhost | grep "DEFAULTS"
 
 # Should use 8.2 as the default php version
 lando php -v | grep "PHP 8.2"
 
 # Should be running apache 2.4 by default
-lando ssh -s appserver -c "apachectl -V | grep 2.4"
-lando ssh -s appserver -c "curl -IL localhost" | grep Server | grep 2.4
+lando exec appserver -- apachectl -V | grep 2.4
+lando exec appserver -- curl -IL localhost | grep Server | grep 2.4
 
 # Should be running mariadb 10.6 by default
 lando mysql -V | grep 10.6 | grep MariaDB
@@ -44,17 +42,16 @@ lando mysql backdrop -e quit
 lando bee version | grep "Bee for Backdrop CMS" | grep "1.x-1.x"
 
 # Should use composer 2 by default
-lando ssh -s appserver -c "/bin/sh -c 'NO_COLOR=1 composer -V'" | grep "Composer version 2."
+lando exec appserver -- /bin/sh -c 'NO_COLOR=1 composer -V' | grep "Composer version 2."
 
 # Should use the correct default config files
-lando ssh -s appserver -c "cat /usr/local/etc/php/conf.d/zzz-lando-my-custom.ini" | grep "; LANDOBACKDROPPHPINI"
-lando ssh -s appserver -c "curl -L http://localhost/info.php" | grep max_execution_time | grep 91
-lando ssh -s database -c "cat /opt/bitnami/mariadb/conf/my_custom.cnf" | grep "LANDOBACKDROPMYSQLCNF"
+lando exec appserver -- cat /usr/local/etc/php/conf.d/zzz-lando-my-custom.ini | grep "; LANDOBACKDROPPHPINI"
+lando exec appserver -- curl -L http://localhost/info.php | grep max_execution_time | grep 91
+lando exec database -- cat /opt/bitnami/mariadb/conf/my_custom.cnf | grep "LANDOBACKDROPMYSQLCNF"
 lando mysql -u root -e "show variables;" | grep innodb_lock_wait_timeout | grep 121
 ```
 
-Destroy tests
--------------
+## Destroy tests
 
 Run the following commands to trash this app like nothing ever happened.
 

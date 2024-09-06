@@ -1,13 +1,27 @@
+## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
+
+## Bug Fixes
+
+* Fixed bug causing default `proxy` settings to be clobbered by user specified ones
+
+## Internal
+
+* Updated DevOps to use new `lando exec`
+* Updated `ubuntu` test runners to `24.04`
+
 ## v1.4.0 - [May 1, 2024](https://github.com/lando/backdrop/releases/tag/v1.4.0)
-  * Fixed spelling errors. [#48](https://github.com/lando/backdrop/issues/48)
-  * Updated mariadb plugin. [#51](https://github.com/lando/mariadb/issues/51)
+
+* Fixed spelling errors. [#48](https://github.com/lando/backdrop/issues/48)
+* Updated mariadb plugin. [#51](https://github.com/lando/mariadb/issues/51)
 
 ## v1.3.0 - [March 8, 2024](https://github.com/lando/backdrop/releases/tag/v1.3.0)
-  * Updated to latest database services.
+
+* Updated to latest database services.
 
 ## v1.2.1 - [March 4, 2024](https://github.com/lando/backdrop/releases/tag/v1.2.1)
 
 ### Fixes
+
 * Improved `database` selection for purposes of `config` loading, fixes some `database` bootup issues when the `database` type is overridden downstream
 
 ## v1.2.0 - [February 24, 2024](https://github.com/lando/backdrop/releases/tag/v1.2.0)

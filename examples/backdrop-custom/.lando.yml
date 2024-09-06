@@ -1,4 +1,7 @@
 name: backdrop-custom
+proxy:
+  appserver_nginx:
+    - hollaback.backdrop.lndo.site
 recipe: backdrop
 config:
   php: '8.3'

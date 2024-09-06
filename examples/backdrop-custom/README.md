@@ -41,8 +41,8 @@ lando mysql backdrop -e quit
 # Should have xdebug enabled
 lando php -m | grep Xdebug
 
-# Should have bee 1.x-1.x
-lando bee version | grep "Bee for Backdrop CMS" | grep "1.x-1.x"
+# Should use bee 1.x-1. by default
+lando bee version | grep "Version" | grep "1.x-1."
 
 # Should have proxy urls present in lando info
 lando info | grep "backdrop-custom.lndo.site"

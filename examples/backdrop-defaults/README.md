@@ -38,8 +38,8 @@ lando php -m | grep xdebug || echo $? | grep 1
 # Should use the default database connection info
 lando mysql backdrop -e quit
 
-# Should use bee 1.x-1.x by default
-lando bee version | grep "Bee for Backdrop CMS" | grep "1.x-1.x"
+# Should use bee 1.x-1. by default
+lando bee version | grep "Version" | grep "1.x-1."
 
 # Should use composer 2 by default
 lando exec appserver -- /bin/sh -c 'NO_COLOR=1 composer -V' | grep "Composer version 2."

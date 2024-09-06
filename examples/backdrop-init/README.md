@@ -54,7 +54,7 @@ lando mysql backdrop -e quit
 
 # Should use bee 1.x-1.x by default
 cd backdrop/backdrop
-lando bee version | grep "Bee for Backdrop CMS" | grep "1.x-1.x"
+lando bee version | grep "Version" | grep "1.x-1."
 
 # Should be able to install Backdrop with bee and verify it installed
 cd backdrop/backdrop

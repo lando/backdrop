@@ -48,6 +48,10 @@ lando bee version | grep "Version" | grep "1.x-1."
 lando info | grep "backdrop-custom.lndo.site"
 lando info | grep "hollaback.backdrop.lndo.site"
 
+# Should serve and be accessible over ssl if specified
+lando exec appserver_nginx -- curl https://localhost
+lando exec appserver -- curl https://appserver_nginx
+
 # Should be using custom config files
 lando exec appserver -- curl -L appserver_nginx/info.php | grep memory_limit | grep 513M
 lando exec appserver_nginx -- cat /opt/bitnami/nginx/conf/vhosts/lando.conf | grep server_name | grep pirog

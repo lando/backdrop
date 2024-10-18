@@ -11,6 +11,7 @@ config:
   database: mysql:5.7
   bee: '1.x-1.x'
   xdebug: true
+  ssl: true
   config:
     database: config/mysql.cnf
     php: config/php.ini

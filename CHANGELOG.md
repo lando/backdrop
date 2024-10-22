@@ -1,6 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
-  * Removed unnecessary dependency lando/nginx.
+* Removed unnecessary dependency lando/nginx.
+* Updated lando/php to v1.5.0.  
 
 ## v1.5.0 - [September 30, 2024](https://github.com/lando/backdrop/releases/tag/v1.5.0)
 

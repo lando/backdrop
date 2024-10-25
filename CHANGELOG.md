@@ -1,8 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
 * Updated release process to generate an edge release when stable releases are created.
-
-  * Removed unnecessary dependency lando/nginx.
+* Removed unnecessary dependency lando/nginx.
 
 ## v1.5.0 - [September 30, 2024](https://github.com/lando/backdrop/releases/tag/v1.5.0)
 

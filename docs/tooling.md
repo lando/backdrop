@@ -36,7 +36,7 @@ You can also run `lando` from inside your app directory for a complete list of c
 
 If you are using a webroot besides `.`, you will need to `cd` into that directory and run `lando bee` from there. This is because many site-specific `bee` commands will only run correctly if you run `bee` from a directory that also contains a Backdrop site.
 
-If you are annoyed by having to `cd` into that directory every time you run a `bee` command, you can get around it by [overriding](https://docs.lando.dev/core/v3/tooling.html#overriding) the `bee` tooling command in your [Landofile](https://docs.lando.dev/core/v3) so that bee always runs from your `webroot`.
+If you are annoyed by having to `cd` into that directory every time you run a `bee` command, you can get around it by [overriding](https://docs.lando.dev/landofile/tooling.html#overriding) the `bee` tooling command in your [Landofile](https://docs.lando.dev/landofile/) so that bee always runs from your `webroot`.
 
 **Note that hard coding the `root` like this may have unforeseen and bad consequences for some `bee` commands such as `bee scr`.**
 

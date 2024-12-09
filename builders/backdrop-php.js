@@ -22,11 +22,11 @@ const loadScripts = options => {
 module.exports = {
   name: 'backdrop-php',
   parent: '_appserver',
-  builder: (parent, config) => class BackdropPhp extends LandoPhp.builder(parent, LandoPhp.config) {
+  builder: parent => class BackdropPhp extends LandoPhp.builder(parent, LandoPhp.config) {
     constructor(id, options = {}, factory) {
       loadScripts(options);
       options.nginxServiceType = 'backdrop-nginx';
       super(id, options, factory);
-    };
+    }
   },
 };

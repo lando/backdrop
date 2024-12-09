@@ -5,9 +5,9 @@ description: Learn how to configure the Lando Backdrop recipe.
 
 # Configuration
 
-While Lando [recipes](https://docs.lando.dev/core/v3/recipes.html) set sane defaults so they work out of the box, they are also [configurable](https://docs.lando.dev/core/v3/recipes.html#config).
+While Lando [recipes](https://docs.lando.dev/landofile/recipes.html) set sane defaults so they work out of the box, they are also [configurable](https://docs.lando.dev/landofile/recipes.html#config).
 
-Here are the configuration options, set to the default values, for this recipe's [Landofile](https://docs.lando.dev/core/v3). If you are unsure about where this goes or what this means, we *highly recommend* scanning the [recipes documentation](https://docs.lando.dev/core/v3/recipes.html) to get a good handle on how the magicks work.
+Here are the configuration options, set to the default values, for this recipe's [Landofile](https://docs.lando.dev/landofile/). If you are unsure about where this goes or what this means, we *highly recommend* scanning the [recipes documentation](https://docs.lando.dev/landofile/recipes.html) to get a good handle on how the magicks work.
 
 ```yaml
 recipe: backdrop
@@ -29,13 +29,13 @@ config:
   backdrush: false
 ```
 
-Note that if the above config options are not enough, all Lando recipes can be further [extended and overridden](https://docs.lando.dev/core/v3/recipes.html#extending-and-overriding-recipes).
+Note that if the above config options are not enough, all Lando recipes can be further [extended and overridden](https://docs.lando.dev/landofile/recipes.html#extending-and-overriding-recipes).
 
 ## Choosing a php version
 
-You can set `php` to any version that is available in our [php service](https://docs.lando.dev/plugins/php). However, you should consult the [Backdrop requirements](https://docs.backdropcms.org/documentation/system-requirements) to make sure that version is actually supported by Backdrop itself.
+You can set `php` to any version that is available in our [php service](https://docs.lando.dev/plugins/php/). However, you should consult the [Backdrop requirements](https://docs.backdropcms.org/documentation/system-requirements) to make sure that version is actually supported by Backdrop itself.
 
-The [recipe config](https://docs.lando.dev/core/v3/recipes.html#config) to set the Backdrop recipe to use `php` version `5.5` is shown below:
+The [recipe config](https://docs.lando.dev/landofile/recipes.html#config) to set the Backdrop recipe to use `php` version `5.5` is shown below:
 
 ```yaml
 recipe: backdrop

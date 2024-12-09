@@ -7,9 +7,9 @@ const LandoMysql = require('@lando/mysql/builders/mysql.js');
 module.exports = {
   name: 'backdrop-mysql',
   parent: '_service',
-  builder: (parent, config) => class BackdropMysql extends LandoMysql.builder(parent, LandoMysql.config) {
+  builder: parent => class BackdropMysql extends LandoMysql.builder(parent, LandoMysql.config) {
     constructor(id, options = {}) {
       super(id, options, {services: _.set({}, options.name)});
-    };
+    }
   },
 };

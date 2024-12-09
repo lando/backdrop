@@ -8,7 +8,7 @@ next: ./getting-started.html
 
 [Backdrop CMS](https://backdropcms.org/) is the free and Open Source CMS that helps you build websites for businesses and non-profits.
 
-Lando offers a configurable [recipe](https://docs.lando.dev/core/v3/recipes.html) for developing [Backdrop CMS](https://backdropcms.org/) apps.
+Lando offers a configurable [recipe](https://docs.lando.dev/landofile/recipes.html) for developing [Backdrop CMS](https://backdropcms.org/) apps.
 
 #### Features of this plugin:
 

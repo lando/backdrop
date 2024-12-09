@@ -1,5 +1,7 @@
 temp
 cache
 dist
+examples/backdrop-init
+
 _site
 !.vitepress

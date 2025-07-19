@@ -3,7 +3,7 @@
   "description": "A Lando plugin that provides a tight integration with Backdrop.",
   "version": "1.7.0",
   "author": "Mike Pirog @pirog",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "repository": "lando/backdrop",
   "bugs": "https://github.com/lando/backdrop/issues/new/choose",
   "homepage": "https://github.com/lando/backdrop",

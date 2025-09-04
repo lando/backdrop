@@ -3,7 +3,7 @@
 This is the _official_ [Lando](https://lando.dev) plugin for [Backdrop](https://backdropcms.org/). When installed it...
 
 * Allows users to run `backdrop` cms
-* Allows users to configure `php` version from `5.3` all the way to `8.2`
+* Allows users to configure `php` version from `5.3` all the way to `8.4+`
 * Allows users to configure `webroot`
 * Allows users to configure web server to (`apache` or `nginx`)
 * Allows users to configure database backend to (`mariadb` or `mysql`)

@@ -30,7 +30,7 @@ mkdir -p ~/.lando/plugins
 # Install plugin
 # NOTE: Modify the "npm install @lando/backdrop" line to install a particular version eg
 # npm install @lando/backdrop@0.5.2
-docker run --rm -it -v ${HOME}/.lando/plugins:/plugins -w /tmp node:18-alpine sh -c \
+docker run --rm -it -v ${HOME}/.lando/plugins:/plugins -w /tmp node:20-alpine sh -c \
   "npm init -y \
   && npm install @lando/backdrop --production --flat --no-default-rc --no-lockfile --link-duplicates \
   && npm install --production --cwd /tmp/node_modules/@lando/backdrop \

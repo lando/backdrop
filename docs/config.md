@@ -35,12 +35,12 @@ Note that if the above config options are not enough, all Lando recipes can be f
 
 You can set `php` to any version that is available in our [php service](https://docs.lando.dev/plugins/php/index.html). However, you should consult the [Backdrop requirements](https://docs.backdropcms.org/documentation/system-requirements) to make sure that version is actually supported by Backdrop itself.
 
-The [recipe config](https://docs.lando.dev/landofile/recipes.html#config) to set the Backdrop recipe to use `php` version `5.5` is shown below:
+The [recipe config](https://docs.lando.dev/landofile/recipes.html#config) to set the Backdrop recipe to use `php` version `8.3` is shown below:
 
 ```yaml
 recipe: backdrop
 config:
-  php: '5.5'
+  php: '8.3'
 ```
 
 ## Choosing a composer version

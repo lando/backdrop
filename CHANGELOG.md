@@ -1,5 +1,16 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Added dependabot config
+* Bumped actions/add-to-project from 1.0.0 to 1.0.2 [#76](https://github.com/lando/backdrop/pull/76)
+* Bumped actions/cache from 4 to 5 [#77](https://github.com/lando/backdrop/pull/77)
+* Bumped actions/checkout from 4 to 6 [#74](https://github.com/lando/backdrop/pull/74)
+* Bumped actions/setup-node from 4 to 6 [#78](https://github.com/lando/backdrop/pull/78)
+* Fixed release workflow trigger from `created` to `published`
+* Updated to [@lando/argv@1.2.0](https://github.com/lando/argv/releases/tag/v1.2.0) [#72](https://github.com/lando/backdrop/pull/72)
+* Updated to [@lando/mariadb@1.8.0](https://github.com/lando/mariadb/releases/tag/v1.8.0) [#75](https://github.com/lando/backdrop/pull/75)
+* Updated to [@lando/php@1.10.0](https://github.com/lando/php/releases/tag/v1.10.0) [#71](https://github.com/lando/backdrop/pull/71)
+* Updated to [@lando/postgres@1.6.0](https://github.com/lando/postgres/releases/tag/v1.6.0) [#73](https://github.com/lando/backdrop/pull/73)
+
 ## v1.8.0 - [September 4, 2025](https://github.com/lando/backdrop/releases/tag/v1.8.0)
 
 * Switched images to [bitnamilegacy](https://github.com/bitnami/containers/issues/83267) namespace

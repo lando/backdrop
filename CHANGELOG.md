@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.9.0 - [February 18, 2026](https://github.com/lando/backdrop/releases/tag/v1.9.0)
+
 * Added dependabot config
 * Bumped actions/add-to-project from 1.0.0 to 1.0.2 [#76](https://github.com/lando/backdrop/pull/76)
 * Bumped actions/cache from 4 to 5 [#77](https://github.com/lando/backdrop/pull/77)

@@ -32,12 +32,12 @@ lando mysql backdrop -e "SELECT 1"
 
 ```bash
 # Should be able to export with bee without SSL errors
-lando bee db-export --file=/tmp/bee-export.sql
+lando bee db-export --file=bee-export.sql
 ```
 
 ```bash
 # Exported SQL should use MySQL dump format (not MariaDB)
-lando exec appserver -- head -5 /tmp/bee-export.sql | grep -i "dump" | grep -iq "MySQL"
+lando exec appserver -- head -5 /app/bee-export.sql | grep -i "dump" | grep -iq "MySQL"
 ```
 
 ```bash

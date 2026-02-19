@@ -37,13 +37,13 @@ lando bee db-export --file=/tmp/bee-export.sql
 
 ```bash
 # Exported SQL should use MySQL dump format (not MariaDB)
-lando exec appserver -- cat /tmp/bee-export.sql | grep -qiv "MariaDB dump"
+lando exec appserver -- head -5 /tmp/bee-export.sql | grep -i "dump" | grep -iq "MySQL"
 ```
 
 ```bash
 # Should be able to export with db-export without SSL errors
 lando db-export --stdout > /tmp/lando-export.sql
-cat /tmp/lando-export.sql | grep -i "Dump" | grep -qiv "MariaDB"
+head -5 /tmp/lando-export.sql | grep -i "dump" | grep -iq "MySQL"
 ```
 
 ## Destroy tests

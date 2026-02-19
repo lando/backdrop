@@ -1,7 +1,7 @@
 {
   "name": "@lando/backdrop",
   "description": "A Lando plugin that provides a tight integration with Backdrop.",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "author": "Mike Pirog @pirog",
   "license": "MIT",
   "repository": "lando/backdrop",

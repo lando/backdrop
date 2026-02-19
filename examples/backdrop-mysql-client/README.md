@@ -13,7 +13,16 @@ Run the following commands to get up and running with this example.
 ```bash
 # Should start up successfully
 lando poweroff
+# Download and extract Backdrop
+rm -rf web && mkdir -p web
+curl -fsSL https://github.com/backdrop/backdrop/releases/download/1.33.1/backdrop.zip -o /tmp/backdrop.zip
+unzip -q /tmp/backdrop.zip -d web
+mv web/backdrop/* web/backdrop/.* web/ 2>/dev/null || true
+rmdir web/backdrop 2>/dev/null || true
 lando start
+# Install Backdrop with bee
+cd web && chmod +x core/scripts/*
+lando bee site-install --db-name=backdrop --db-user=backdrop --db-pass=backdrop --db-host=database --username=admin --password=admin --email=test@lando.dev --site-name="MySQL Client Test" --auto
 ```
 
 ## Verification commands
@@ -32,6 +41,7 @@ lando mysql backdrop -e "SELECT 1"
 
 ```bash
 # Should be able to export with bee without SSL errors and use MySQL dump format
+cd web
 lando bee db-export --file=/tmp/bee-export.sql
 lando exec appserver -- bash -c "zcat /tmp/bee-export.sql.gz | head -5" | grep -i "dump" | grep -iq "MySQL"
 ```

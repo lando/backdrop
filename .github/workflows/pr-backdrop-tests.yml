@@ -21,6 +21,7 @@ jobs:
           - examples/backdrop-init
           - examples/backdrop-mariadb
           - examples/backdrop-mysql8
+          - examples/backdrop-mysql-client
           - examples/backdrop-nginx
         lando-version:
           - 3-edge

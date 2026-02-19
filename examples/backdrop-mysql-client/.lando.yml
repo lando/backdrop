@@ -1,0 +1,10 @@
+name: backdrop-mysql-client
+recipe: backdrop
+config:
+  php: '8.4'
+  database: mysql:8.0
+  webroot: web
+
+# do not remove this
+plugins:
+  "@lando/backdrop": ../..

@@ -46,4 +46,11 @@ config.*.timestamp-*-*.*
 yarn.lock
 
 # Syncthing conflict files
+
+
+# Syncthing
+.stfolder/
+.stversions/
+.stignore
 *.sync-conflict-*
+

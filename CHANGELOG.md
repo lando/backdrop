@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Updated `@lando/php` to `^1.11.0` for MySQL client auto-detection fix [#82](https://github.com/lando/backdrop/pull/82)
+
 ## v1.9.0 - [February 18, 2026](https://github.com/lando/backdrop/releases/tag/v1.9.0)
 
 * Added dependabot config

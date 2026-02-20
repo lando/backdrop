@@ -1,8 +1,9 @@
-# Backdrop MySQL 5.7 SSL Test
+# Backdrop MySQL Default Version SSL Test
 
-This example tests that the backdrop recipe with MySQL 5.7 correctly handles
-database client connectivity. MySQL 5.7 uses self-signed certificates that can
-cause TLS/SSL errors with the MySQL 8.0 client.
+This example tests that the backdrop recipe with `database: mysql` (no version
+specified, using whatever the default is) correctly handles database client
+connectivity. This matches the real-world scenario where users just set
+`database: mysql` without pinning a version.
 
 See: https://github.com/lando/lando/issues/3833
 
@@ -28,7 +29,7 @@ lando start
 ```bash
 # Should install Backdrop with bee
 cd web && chmod +x core/scripts/*
-lando bee site-install --db-name=backdrop --db-user=backdrop --db-pass=backdrop --db-host=database --username=admin --password=admin --email=test@lando.dev --site-name="MySQL 5.7 Test" --auto
+lando bee site-install --db-name=backdrop --db-user=backdrop --db-pass=backdrop --db-host=database --username=admin --password=admin --email=test@lando.dev --site-name="MySQL Default Test" --auto
 ```
 
 ## Verification commands

@@ -2,7 +2,7 @@ name: backdrop-mysql57
 recipe: backdrop
 config:
   php: '8.4'
-  database: mysql
+  database: mysql:5.7
   webroot: web
 
 # do not remove this

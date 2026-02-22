@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Updated `@lando/php` to `^1.11.1` [#87](https://github.com/lando/backdrop/issues/87)
+
 ## v1.9.1 - [February 19, 2026](https://github.com/lando/backdrop/releases/tag/v1.9.1)
 
 * Updated `@lando/php` to `^1.11.0` for MySQL client auto-detection fix [#82](https://github.com/lando/backdrop/pull/82)

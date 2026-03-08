@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Updated to [@lando/php@1.12.0](https://github.com/lando/php/releases/tag/v1.12.0) for mod_headers/mod_expires and xdebug log fix
+
 ## v1.9.2 - [February 22, 2026](https://github.com/lando/backdrop/releases/tag/v1.9.2)
 
 * Updated `@lando/php` to `^1.11.1` [#87](https://github.com/lando/backdrop/issues/87)

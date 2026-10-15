@@ -19,7 +19,6 @@ module.exports = options => ({
   },
   database: {
     config: getServiceConfig(options, ['database']),
-    authentication: 'mysql_native_password',
     type: `backdrop-${options.database}`,
     portforward: true,
     creds: {

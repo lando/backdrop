@@ -1,6 +1,9 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
 * Updated to [@lando/php@1.12.0](https://github.com/lando/php/releases/tag/v1.12.0) to enable mod_headers/mod_expires by default and fix xdebug log ownership
+* Fixed MySQL 8.2+ failing to start by replacing the removed `expire_logs_days` setting with `binlog_expire_logs_seconds` [lando/backdrop#95](https://github.com/lando/backdrop/issues/95)
+* Fixed `mysql:8` loading the MySQL 5.7 config file and failing to start
+* Fixed MySQL 8.4 startup failure by removing hardcoded `mysql_native_password` authentication [lando/backdrop#95](https://github.com/lando/backdrop/issues/95)
 
 ## v1.9.2 - [February 22, 2026](https://github.com/lando/backdrop/releases/tag/v1.9.2)
 
